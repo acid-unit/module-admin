@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Acid Unit (https://acid.7prism.com). All rights reserved.
+ * See LICENSE file for license details.
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="AcidUnit_Admin::acid_menu"
+             title="Acid Unit 🧪"
+             module="AcidUnit_Admin"
+             sortOrder="90"
+             resource="AcidUnit_Admin::acid_menu"
+        />
+    </menu>
+</config>

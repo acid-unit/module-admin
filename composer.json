@@ -1,0 +1,19 @@
+{
+    "name": "acid-unit/module-admin",
+    "version": "0.1.0",
+    "description": "Admin Magento 2 module",
+    "type": "magento2-module",
+    "require": {
+        "php": ">=8.1",
+        "magento/framework": ">=103.0.4"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "AcidUnit\\Admin\\": ""
+        }
+    },
+    "license": "OSL-3.0"
+}
