@@ -26,7 +26,7 @@ class Yesno extends Select
     }
 
     /**
-     * Render block HTML
+     * Render HTML block
      *
      * @return string
      */

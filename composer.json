@@ -1,7 +1,7 @@
 {
     "name": "acid-unit/module-admin",
-    "version": "0.1.0",
-    "description": "Admin Magento 2 module",
+    "version": "0.1.1",
+    "description": "Admin panel configuration provider for [\uD83E\uDDEAAcid Unit] extensions",
     "type": "magento2-module",
     "require": {
         "php": ">=8.1",

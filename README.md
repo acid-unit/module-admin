@@ -1,31 +1,16 @@
-The README.md file content is generated automatically, see [Magento module README.md](https://github.com/magento/devdocs/wiki/Magento-module-README.md) for more information.
+# About
 
-# AcidUnit_Admin module
+This is a helper module for [🧪Acid Unit](https://acid.7prism.com/) 
+<span title="Magento 2">Adobe Commerce</span> extensions to provide 
+admin panel configuration, menu item and styles.
 
-Admin
+There is no need to install it explicitly, it will be pulled up automatically 
+as a dependency to other packages.
 
-## Installation details
+But in case you still have to have it for some reason in your root `composer.json` file,
+you can install it with `composer require acid-unit/module-admin` command.
 
-For information about a module installation in Magento 2, see [Enable or disable modules](https://devdocs.magento.com/guides/v2.4/install-gde/install/cli/install-cli-subcommands-enable.html).
+# Requirements
 
-## Extensibility
-
-Extension developers can interact with the AcidUnit_Admin module. For more information about the Magento extension mechanism, see [Magento plug-ins](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/plugins.html).
-
-[The Magento dependency injection mechanism](https://devdocs.magento.com/guides/v2.4/extension-dev-guide/depend-inj.html) enables you to override the functionality of the AcidUnit_Admin module.
-
-### Layouts
-
-The module introduces layout handles in the `view/adminhtml/layout` directory.
-
-For more information about a layout in Magento 2, see the [Layout documentation](https://devdocs.magento.com/guides/v2.4/frontend-dev-guide/layouts/layout-overview.html).
-
-### UI components
-
-You can extend product and category updates using the UI components located in the `view/adminhtml/ui_component` directory.
-
-For information about a UI component in Magento 2, see [Overview of UI components](https://devdocs.magento.com/guides/v2.4/ui_comp_guide/bk-ui_comps.html).
-
-## Additional information
-
-For information about significant changes in patch releases, see [Release information](https://devdocs.magento.com/guides/v2.4/release-notes/bk-release-notes.html).
+As long as you have at least `Adobe Commerce 2.4.4` with running `PHP 8.1` or newer, 
+everything should be fine.

@@ -11,7 +11,7 @@ declare(strict_types=1);
 namespace AcidUnit\Admin\Model;
 
 /**
- * Exact copy of \Magento\Checkout\Model\ConfigProviderInterface implementation but for Acid modules
+ * Exact copy of \Magento\Checkout\Model\ConfigProviderInterface implementation but for Acid Unit modules
  */
 interface ConfigProviderInterface
 {
