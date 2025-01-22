@@ -1,11 +1,13 @@
 {
     "name": "acid-unit/module-admin",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Admin panel configuration provider for [\uD83E\uDDEAAcid Unit] extensions",
     "type": "magento2-module",
     "require": {
         "php": ">=8.1",
-        "magento/framework": ">=103.0.4"
+        "magento/framework": ">=103.0.4",
+        "magento/module-theme": "*",
+        "acid-unit/theme-adminhtml-admin": "^0.1"
     },
     "autoload": {
         "files": [

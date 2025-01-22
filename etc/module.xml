@@ -8,5 +8,9 @@
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-    <module name="AcidUnit_Admin"/>
+    <module name="AcidUnit_Admin">
+        <sequence>
+            <module name="Magento_Theme"/>
+        </sequence>
+    </module>
 </config>
