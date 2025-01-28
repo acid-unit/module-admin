@@ -4,13 +4,15 @@
  * See LICENSE file for license details.
  */
 
+/** @noinspection PhpClassCanBeReadonlyInspection */
+
 declare(strict_types=1);
 
 namespace AcidUnit\Admin\ViewModel;
 
 use Magento\Framework\Serialize\Serializer\Json;
 use Magento\Framework\View\Element\Block\ArgumentInterface;
-use AcidUnit\Admin\Model\ConfigProviderInterface;
+use AcidUnit\Core\Api\ConfigProviderInterface;
 
 class ConfigProvider implements ArgumentInterface
 {

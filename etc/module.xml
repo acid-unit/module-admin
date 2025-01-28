@@ -10,6 +10,7 @@
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
     <module name="AcidUnit_Admin">
         <sequence>
+            <module name="AcidUnit_Core"/>
             <module name="Magento_Theme"/>
         </sequence>
     </module>
