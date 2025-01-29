@@ -12,9 +12,11 @@ declare(strict_types=1);
 namespace AcidUnit\Admin\Helper;
 
 use Magento\Framework\App\ObjectManager;
+use Magento\Framework\Exception\LocalizedException;
+use Magento\Framework\Math\Random;
 use Magento\Framework\Serialize\Serializer\Json;
 
-abstract class AdminAbstractTable
+class AdminTableField
 {
     /**
      * @var Json
@@ -22,13 +24,23 @@ abstract class AdminAbstractTable
     private mixed $serializer;
 
     /**
+     * @var array<string>
+     */
+    private array $tableFields;
+
+    /**
      * @param Json|null $serializer
+     * @param Random $mathRandom
+     * @param array $tableFields
      */
     public function __construct(
-        Json $serializer = null
+        Json                    $serializer = null,
+        private readonly Random $mathRandom,
+        array                   $tableFields = []
     ) {
         /** @noinspection ObjectManagerInspection */
         $this->serializer = $serializer ?: ObjectManager::getInstance()->get(Json::class);
+        $this->tableFields = $tableFields;
     }
 
     /**
@@ -80,6 +92,7 @@ abstract class AdminAbstractTable
      *
      * @param mixed $value
      * @return array<mixed>
+     * @throws LocalizedException
      */
     public function makeArrayFieldValue(mixed $value): array
     {
@@ -110,14 +123,23 @@ abstract class AdminAbstractTable
     /**
      * Check whether value is in form retrieved by _encodeArrayFieldValue()
      *
-     * This method should be overridden in child class
-     *
      * @param string|array<mixed> $value
      * @return bool
-     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     protected function isEncodedArrayFieldValue(array|string $value): bool
     {
+        if (!is_array($value)) {
+            return false;
+        }
+
+        unset($value['__empty']);
+
+        foreach ($value as $row) {
+            if (!is_array($row) || array_diff($this->tableFields, array_keys($row))) {
+                return false;
+            }
+        }
+
         return true;
     }
 
@@ -125,29 +147,48 @@ abstract class AdminAbstractTable
      * Encode value to be used in
      * \Magento\Config\Block\System\Config\Form\Field\FieldArray\AbstractFieldArray
      *
-     * This method should be overridden in child class
-     *
      * @param array<mixed> $value
      * @return array<mixed>
-     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+     * @throws LocalizedException
      */
     protected function encodeArrayFieldValue(array $value): array
     {
-        return [];
+        $result = [];
+        unset($value['__empty']);
+
+        foreach ($value as $row) {
+            $resultId = $this->mathRandom->getUniqueHash('_');
+
+            foreach ($this->tableFields as $field) {
+                $result[$resultId][$field] = $row[$field];
+            }
+        }
+
+        return $result;
     }
 
     /**
      * Decode value from used in
      * \Magento\Config\Block\System\Config\Form\Field\FieldArray\AbstractFieldArray
      *
-     * This method should be overridden in child class
-     *
      * @param array<mixed> $value
      * @return array<mixed>
-     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     protected function decodeArrayFieldValue(array $value): array
     {
-        return [];
+        $result = [];
+        unset($value['__empty']);
+
+        foreach ($value as $key => $row) {
+            if (!is_array($row) || array_diff($this->tableFields, array_keys($row))) {
+                continue;
+            }
+
+            foreach ($this->tableFields as $field) {
+                $result[$key][$field] = $row[$field];
+            }
+        }
+
+        return $result;
     }
 }
