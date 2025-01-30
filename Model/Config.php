@@ -13,10 +13,9 @@ namespace AcidUnit\Admin\Model;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\DataObject;
-use Magento\Framework\View\Element\Block\ArgumentInterface;
 use Magento\Store\Model\ScopeInterface;
 
-class Config extends DataObject implements ArgumentInterface
+class Config extends DataObject
 {
     public const XML_PATH_ENABLE_WYSIWYG_FOR_PAGEBUILDER_HTML_ELEMENT
         = 'cms/wysiwyg/enabled_for_pagebuilder_html_element';
