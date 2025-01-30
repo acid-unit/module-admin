@@ -12,9 +12,41 @@
         <!-- root menu item -->
         <add id="AcidUnit_Admin::acid_menu"
              title="🧪 Acid Unit"
+             translate="title"
              module="AcidUnit_Admin"
              sortOrder="90"
              resource="AcidUnit_Admin::acid_menu"
+        />
+
+        <!-- modules menu group -->
+        <add id="AcidUnit_Admin::acid_menu_group_modules"
+             title="Modules"
+             translate="title"
+             module="AcidUnit_Admin"
+             sortOrder="10"
+             parent="AcidUnit_Admin::acid_menu"
+             resource="AcidUnit_Admin::acid_menu_group_modules"
+        />
+
+        <!-- admin tweaks menu group -->
+        <add id="AcidUnit_Admin::acid_menu_group_admin_tweaks"
+             title="Admin Tweaks"
+             translate="title"
+             module="AcidUnit_Admin"
+             sortOrder="20"
+             parent="AcidUnit_Admin::acid_menu"
+             resource="AcidUnit_Admin::acid_menu_group_admin_tweaks"
+        />
+
+        <!-- wysiwyg editor group item -->
+        <add id="AcidUnit_Admin::acid_menu_item_wysiwyg_editor"
+             title="PageBuilder Wysiwyg Editor"
+             translate="title"
+             module="AcidUnit_Admin"
+             sortOrder="10"
+             parent="AcidUnit_Admin::acid_menu_group_admin_tweaks"
+             action="admin/system_config/edit/section/cms"
+             resource="AcidUnit_Admin::acid_menu_item_wysiwyg_editor"
         />
     </menu>
 </config>

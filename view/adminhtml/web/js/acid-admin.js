@@ -139,6 +139,10 @@ require([
     function expandCollapsible(element, id) {
         element.closest('fieldset.admin__collapsible-block').style.display = 'block';
 
+        if (element.style.display === 'none') {
+            return;
+        }
+
         if (isElementInViewport(element)) {
             highlight(element);
         } else {
@@ -158,8 +162,8 @@ require([
         }
     }
 
-    window.addEventListener('load', function () {
-        const acidLinks = document.querySelectorAll('.admin__menu li.item-acid-menu .item-acid-menu-item a'),
+    function initHighlighter() {
+        const acidLinks = document.querySelectorAll('.admin__menu li.item-acid-menu [class*=item-acid-menu] a'),
             urlParams = new URLSearchParams(document.location.search),
             url = new URL(window.location.href),
             id = urlParams.get('h');
@@ -193,5 +197,25 @@ require([
                 }
             });
         });
+    }
+
+    function addExternalUrl() {
+        const menu = document.querySelector('.admin__menu li.item-acid-menu > .submenu > ul[role="menu"]'),
+            li = document.createElement('li'),
+            link = document.createElement('a');
+
+        li.appendChild(link);
+        li.classList.add('level-1');
+        li.classList.add('acid-website-url');
+        link.innerText = 'https://acid.7prism.com';
+        link.href = 'https://acid.7prism.com';
+        link.target = '_blank';
+
+        menu.appendChild(li);
+    }
+
+    window.addEventListener('load', function () {
+        initHighlighter();
+        addExternalUrl();
     });
 });

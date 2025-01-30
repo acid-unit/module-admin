@@ -14,4 +14,13 @@
             <argument name="configProvider" xsi:type="object">AcidUnit\Admin\Model\AdminConfigProvider</argument>
         </arguments>
     </type>
+
+    <type name="AcidUnit\Admin\Model\AdminConfigProvider">
+        <arguments>
+            <argument name="configProviders" xsi:type="array">
+                <!-- admin tweaks config provider for admin data model -->
+                <item name="admin_tweaks_config_provider" xsi:type="object">AcidUnit\Admin\Model\TweaksConfigProvider</item>
+            </argument>
+        </arguments>
+    </type>
 </config>

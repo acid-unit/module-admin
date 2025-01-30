@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Acid Unit (https://acid.7prism.com). All rights reserved.
+ * See LICENSE file for license details.
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="cms">
+            <group id="wysiwyg">
+                <field id="enabled_for_pagebuilder_html_element"
+                       translate="label"
+                       type="select"
+                       sortOrder="3"
+                       showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1"
+                       canRestore="1">
+                    <label>Display 'Show / Hide Editor' button for PageBuilder 'HTML Code' Element [🧪 Acid Unit]</label>
+                    <comment><![CDATA[WYSIWYG Editor also can be added to the text or textarea type admin field. More info <a target="_blank" href="https://acid.7prism.com/module/wysiwyg-editor/">here</a>.]]></comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enabled" negative="1">disabled</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

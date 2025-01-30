@@ -7,6 +7,11 @@
         "acid-unit/module-core": "^0.1",
         "acid-unit/theme-adminhtml-admin": "^0.1",
         "magento/framework": ">=103.0.4",
+        "magento/module-backend": "*",
+        "magento/module-cms": "*",
+        "magento/module-config": "*",
+        "magento/module-page-builder": "*",
+        "magento/module-store": "*",
         "magento/module-theme": "*",
         "php": ">=8.1"
     },

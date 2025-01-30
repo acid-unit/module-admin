@@ -1,7 +1,7 @@
 # About
 
 This is a helper module for [🧪Acid Unit](https://acid.7prism.com/) 
-<span title="Magento 2">Adobe Commerce</span> extensions to provide 
+<span title="Magento">Adobe Commerce</span> extensions to provide 
 admin panel configuration and menu item.
 
 There is no need to install it explicitly, it will be pulled up automatically 

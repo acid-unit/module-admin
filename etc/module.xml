@@ -11,7 +11,12 @@
     <module name="AcidUnit_Admin">
         <sequence>
             <module name="AcidUnit_Core"/>
+            <module name="Magento_Backend"/>
+            <module name="Magento_Config"/>
             <module name="Magento_Theme"/>
+            <module name="Magento_Cms"/>
+            <module name="Magento_Store"/>
+            <module name="Magento_PageBuilder"/>
         </sequence>
     </module>
 </config>
