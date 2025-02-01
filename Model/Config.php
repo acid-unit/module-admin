@@ -5,30 +5,25 @@
  */
 
 /** @noinspection PhpMissingClassConstantTypeInspection */
-/** @noinspection PhpPluralMixedCanBeReplacedWithArrayInspection */
 
 declare(strict_types=1);
 
 namespace AcidUnit\Admin\Model;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
-use Magento\Framework\DataObject;
 use Magento\Store\Model\ScopeInterface;
 
-class Config extends DataObject
+class Config
 {
     public const XML_PATH_ENABLE_WYSIWYG_FOR_PAGEBUILDER_HTML_ELEMENT
         = 'cms/wysiwyg/enabled_for_pagebuilder_html_element';
 
     /**
      * @param ScopeConfigInterface $scopeConfig
-     * @param array<mixed> $data
      */
     public function __construct(
-        private readonly ScopeConfigInterface $scopeConfig,
-        array                                 $data = []
+        private readonly ScopeConfigInterface $scopeConfig
     ) {
-        parent::__construct($data);
     }
 
     /**
