@@ -221,3 +221,5 @@ parse the value string and work with the data.
 
 As long as you have at least `Adobe Commerce 2.4.4` with running `PHP 8.1` or newer, 
 everything should be fine.
+
+<small>Tested on Adobe Commerce 2.4.7-p3 with PHP 8.3</small>
