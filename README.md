@@ -1,23 +1,25 @@
 # About
 
-[🧪Acid Unit](https://acid.7prism.com/) 
-<span title="Magento">Adobe Commerce</span> extension that provides 
-useful things and tweaks for an admin panel.
+[🧪Acid Unit](https://acid.7prism.com/)
+Magento Open Source extension designed to enhance
+the admin panel with useful tweaks and configurations.
 
-Additionally, this module is used as a helper admin panel-related module 
-with configuration and menu items, and will be pulled automatically 
-as a dependency with all Acid Unit extensions.
+This module also serves as a helper for admin-related configurations and menu management. 
+It is automatically installed as a dependency for all Acid Unit extensions.
 
 # Admin Panel Tweaks
 
-## By Config
+## Configuration-Based Tweaks
 
-### WYSIWYG editor for PageBuilder `HTML Code` element
+### WYSIWYG Editor for PageBuilder `HTML Code` Element
 
 #### Description
 
-`HTML Code` is an awesome element, but some non-tech users can struggle while using it.
-This config allows admin users to show/hide WYSIWYG editor inside element fast HTML editing.
+By enabling this option, users can edit content visually instead of working directly with raw HTML, 
+reducing errors and making content management easier.
+
+The `HTML Code` element is a powerful tool, but non-technical users may find it difficult to use.
+This configuration allows admin users to toggle the WYSIWYG editor inside the element for quicker HTML editing.
 
 #### Toggle Config
 
@@ -29,15 +31,15 @@ This config allows admin users to show/hide WYSIWYG editor inside element fast H
 
 ![Pagebuilder Editor Demo](https://github.com/acid-unit/docs/blob/main/admin/wysiwyg-editor/pagebuilder-editor-demo.gif?raw=true)
 
-## By Code
+## Code-Based Tweaks
 
-### WYSIWYG editor for textarea fields
+### WYSIWYG Editor for Textarea Fields
 
 #### Description
 
-Having ability to define and edit HTML for small content blocks makes the content management
+The ability to define and edit HTML for small content blocks makes content management more 
 flexible and efficient. PageBuilder is a great but massive tool which does not cover all
-the content editing requirements. While plain WYSIWYG editor does the great job with 
+the content editing requirements. The plain WYSIWYG editor is ideal for 
 small to medium content blocks.
 
 #### Implementation
@@ -73,11 +75,14 @@ Use the code below as an example.
 
 ![Admin Field Editor Demo](https://github.com/acid-unit/docs/blob/main/admin/wysiwyg-editor/admin-field-editor-demo.gif?raw=true)
 
-### Table field
+### Table Field
 
 #### Description
 
-This will be useful to store and edit multiple text and dropdown data into a single field.
+The Table Field feature allows multiple values, to be stored and edited efficiently 
+in a single field. 
+This is ideal for scenarios like managing dynamic redirects, 
+tracking event-based actions, or defining structured content blocks.
 
 #### Implementation
 
@@ -202,6 +207,14 @@ class Yesno extends Select
 }
 ```
 
+After declaring virtual classes, make sure you compile them and deploy static content if necessary: 
+
+```shell
+bin/magento setup:di:compile
+bin/magento setup:static-content:deploy -f
+bin/magento cache:flush
+```
+
 #### Demo
 
 ![Pagebuilder Editor Demo](https://github.com/acid-unit/docs/blob/main/admin/table-field/demo.gif?raw=true)
@@ -209,17 +222,28 @@ class Yesno extends Select
 
 #### Additional
 
-The value of table field will be stored as a stringified object and should be treated as any other regular admin text field for getting value.
-`JSON.parse` can be used on the frontend or `\Magento\Framework\Serialize\Serializer\Json::serialize` on the backend to
-parse the value string and work with the data.
+The table field value is stored as a stringified object and can be handled like any regular admin text field.
+Use `JSON.parse` on the frontend or `\Magento\Framework\Serialize\Serializer\Json::serialize` on the backend to
+parse and manipulate the data.
 
 # Installation
 
-`composer require acid-unit/module-admin`
+This module is installed automatically when using any Acid Unit extensions. 
+If installing manually, use:
+
+```shell
+composer require acid-unit/module-admin
+```
+
+After that make sure your module is registered:
+
+```shell
+bin/magento module:enable AcidUnit_Admin
+```
 
 # Requirements
 
-As long as you have at least `Adobe Commerce 2.4.4` with running `PHP 8.1` or newer, 
-everything should be fine.
+This module is compatible with Magento Open Source and Adobe Commerce versions >=`2.4.4`
+and requires `PHP 8.1` or later.
 
-<small>Tested on Adobe Commerce 2.4.7-p3 with PHP 8.3</small>
+<small>✅ Verified on Adobe Commerce 2.4.7-p3 with PHP 8.3</small>
