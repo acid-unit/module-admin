@@ -1,7 +1,7 @@
 {
     "name": "acid-unit/module-admin",
     "version": "0.1.3",
-    "description": "Admin panel configuration provider for [\uD83E\uDDEAAcid Unit] extensions",
+    "description": "Magento admin panel extension with useful tweaks and configuration for [\uD83E\uDDEAAcid Unit] extensions",
     "type": "magento2-module",
     "require": {
         "acid-unit/module-core": "^0.1",
