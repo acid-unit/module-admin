@@ -1,22 +1,27 @@
 # About
 
-A **Magento Open Source** extension designed to enhance the **admin panel experience** 
-with additional tweaks and configuration options.
+A **Magento Open Source** extension that enhances the **admin panel experience** 
+with additional tools, tweaks and customization options.
 
 This module:<br>
 ✅ **Enhances the admin interface** with additional configuration tools.<br>
 ✅ Improves menu management for better navigation within Acid Unit extensions.<br>
 ✅ Acts as a dependency for all Acid Unit extensions, ensuring consistent admin functionality.
 
-Tweaks summary table:
+## Quick Installation
+
+To install the module, run:
+```shell
+composer require acid-unit/module-admin
+```
+
+## Admin Features Overview
 
 * [Configuration-Based Tweaks](#configuration-based-tweaks)
     + [WYSIWYG for PageBuilder `HTML Code` Element](#wysiwyg-editor-for-pagebuilder--html-code--element)
 * [Code-Based Tweaks](#code-based-tweaks)
     + [WYSIWYG for Textarea Fields](#wysiwyg-editor-for-textarea-fields)
     + [Table Field](#table-field)
-
-# Admin Panel Tweaks
 
 ## Configuration-Based Tweaks
 
@@ -49,6 +54,9 @@ lets **admin users toggle the WYSIWYG editor** inside the element for **quicker 
 Provides **HTML editing** directly within the admin field, 
 providing a **lightweight alternative to PageBuilder** for small-to-medium content sections.
 
+This feature allows admins to manage structured data efficiently, making it easier 
+to configure settings like custom redirects, tracking events, and more.
+
 #### Implementation
 
 The **toggle button** should be defined as a new `<field>` element with the following structure:
@@ -79,11 +87,9 @@ so that it appears **directly beneath it**.
 
 #### Description
 
-The **Table Field** allows multiple values to be stored **within** a single field, 
-making it **ideal** for:<br>
-✅ Dynamic redirects<br>
-✅ Event-based tracking<br>
-✅ Structured content blocks
+The Table Field is useful for storing structured data in the admin panel, like custom redirects,
+event tracking mappings, or configurable lists.   
+Below is how to define it in `system.xml`.
 
 #### Implementation
 
@@ -240,8 +246,8 @@ to parse and manipulate the data.
 
 # Installation
 
-This module is **installed automatically** with any Acid Unit extensions.
-If installing manually, use:
+If you're using another Acid Unit extension, this module is installed automatically as a dependency.  
+However, if you want to use these Admin Features separately, install the module manually.
 
 ```shell
 composer require acid-unit/module-admin
@@ -256,7 +262,7 @@ bin/magento setup:upgrade
 
 # Requirements
 
-✅ **Compatible with**: Magento Open Source & Adobe Commerce `>=2.4.4`<br>
+✅ **Compatible with**: Magento Open Source & Adobe Commerce `>=2.4.4`  
 ✅ Requires `PHP 8.1+`
 
 <small>🛠 **Tested on** Magento Open Source `2.4.7-p3` with `PHP 8.3`</small>
