@@ -15,8 +15,11 @@ use Magento\Store\Model\ScopeInterface;
 
 class Config
 {
-    public const XML_PATH_ENABLE_WYSIWYG_FOR_PAGEBUILDER_HTML_ELEMENT
+    public const XML_PATH_WYSIWYG_FOR_PAGEBUILDER_HTML_ELEMENT_ENABLED
         = 'cms/wysiwyg/enabled_for_pagebuilder_html_element';
+
+    public const XML_PATH_DISCOUNT_FIELD_ENABLED
+        = 'checkout/options/discount_field_enabled';
 
     /**
      * @param ScopeConfigInterface $scopeConfig
@@ -27,6 +30,19 @@ class Config
     }
 
     /**
+     * Is Discount Code field enabled
+     *
+     * @return bool
+     */
+    public function isDiscountFieldEnabled(): bool
+    {
+        return $this->scopeConfig->isSetFlag(
+            self::XML_PATH_DISCOUNT_FIELD_ENABLED,
+            ScopeInterface::SCOPE_STORE
+        );
+    }
+
+    /**
      * Is WYSIWYG Editor is enabled for 'HTML Code' Pagebuilder element
      *
      * @return bool
@@ -34,7 +50,7 @@ class Config
     public function isWysiwygForPageBuilderHtmlElementEnabled(): bool
     {
         return $this->scopeConfig->isSetFlag(
-            self::XML_PATH_ENABLE_WYSIWYG_FOR_PAGEBUILDER_HTML_ELEMENT,
+            self::XML_PATH_WYSIWYG_FOR_PAGEBUILDER_HTML_ELEMENT_ENABLED,
             ScopeInterface::SCOPE_STORE
         );
     }

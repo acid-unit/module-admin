@@ -19,12 +19,28 @@
                        showInWebsite="1"
                        showInStore="1"
                        canRestore="1">
-                    <label>Display 'Show / Hide Editor' button for PageBuilder 'HTML Code' Element [🧪 Acid Unit]</label>
+                    <label>Display 'Show / Hide Editor' button for PageBuilder 'HTML Code' Element [🧪]</label>
                     <comment><![CDATA[WYSIWYG Editor also can be added to the text or textarea type admin field. More info <a target="_blank" href="https://acid.7prism.com/module/admin/">here</a>.]]></comment>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <depends>
                         <field id="enabled" negative="1">disabled</field>
                     </depends>
+                </field>
+            </group>
+        </section>
+
+        <section id="checkout">
+            <group id="options">
+                <field id="discount_field_enabled"
+                       translate="label"
+                       type="select"
+                       sortOrder="40"
+                       showInDefault="1"
+                       showInWebsite="1"
+                       showInStore="1"
+                       canRestore="1">
+                    <label>Enable Discount Codes [🧪]</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
             </group>
         </section>

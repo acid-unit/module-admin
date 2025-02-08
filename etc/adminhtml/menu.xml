@@ -18,7 +18,7 @@
              resource="AcidUnit_Admin::acid_menu"
         />
 
-        <!-- modules menu group -->
+        <!-- modules group -->
         <add id="AcidUnit_Admin::acid_menu_group_modules"
              title="Modules"
              translate="title"
@@ -28,7 +28,7 @@
              resource="AcidUnit_Admin::acid_menu_group_modules"
         />
 
-        <!-- admin tweaks menu group -->
+        <!-- admin tweaks group -->
         <add id="AcidUnit_Admin::acid_menu_group_admin_tweaks"
              title="Admin Tweaks"
              translate="title"
@@ -38,15 +38,26 @@
              resource="AcidUnit_Admin::acid_menu_group_admin_tweaks"
         />
 
-        <!-- wysiwyg editor group item -->
+        <!-- wysiwyg editor item -->
         <add id="AcidUnit_Admin::acid_menu_item_wysiwyg_editor"
-             title="PageBuilder Wysiwyg Editor"
+             title="Toggle PageBuilder Wysiwyg Editor"
              translate="title"
              module="AcidUnit_Admin"
              sortOrder="10"
              parent="AcidUnit_Admin::acid_menu_group_admin_tweaks"
              action="admin/system_config/edit/section/cms"
              resource="AcidUnit_Admin::acid_menu_item_wysiwyg_editor"
+        />
+
+        <!-- discount codes item -->
+        <add id="AcidUnit_Admin::acid_menu_item_discount_codes"
+             title="Toggle Discount Codes Field"
+             translate="title"
+             module="AcidUnit_Admin"
+             sortOrder="20"
+             parent="AcidUnit_Admin::acid_menu_group_admin_tweaks"
+             action="admin/system_config/edit/section/checkout"
+             resource="AcidUnit_Admin::acid_menu_item_discount_codes"
         />
     </menu>
 </config>

@@ -26,15 +26,20 @@ require([
                 path: 'admin/system_config/edit/section/google',
                 text: 'Google Tag Manager'
             },
-            wysiwygEditor: {
-                href: 'row_cms_wysiwyg_enabled_for_pagebuilder_html_element',
-                path: 'admin/system_config/edit/section/cms',
-                text: 'WYSIWYG Editor'
-            },
             layeredNavigation: {
                 href: 'catalog_layered_navigation_acid_unit-head',
                 path: 'admin/system_config/edit/section/catalog',
                 text: 'Layered Navigation'
+            },
+            wysiwygEditor: {
+                href: 'row_cms_wysiwyg_enabled_for_pagebuilder_html_element',
+                path: 'admin/system_config/edit/section/cms',
+                text: 'Toggle WYSIWYG Editor'
+            },
+            discountCodes: {
+                href: 'row_checkout_options_discount_codes_enabled',
+                path: 'admin/system_config/edit/section/checkout',
+                text: 'Toggle Discount Codes'
             }
         };
 

@@ -1,6 +1,6 @@
 {
     "name": "acid-unit/module-admin",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "Magento admin panel extension with useful tweaks and configuration for [\uD83E\uDDEAAcid Unit] extensions",
     "type": "magento2-module",
     "require": {
@@ -8,8 +8,10 @@
         "acid-unit/theme-adminhtml-admin": "^0.2",
         "magento/framework": ">=103.0.4",
         "magento/module-backend": "*",
+        "magento/module-checkout": "*",
         "magento/module-cms": "*",
         "magento/module-config": "*",
+        "magento/module-customer": "*",
         "magento/module-page-builder": "*",
         "magento/module-store": "*",
         "magento/module-theme": "*",

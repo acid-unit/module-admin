@@ -14,5 +14,11 @@
                 <enabled_for_pagebuilder_html_element>1</enabled_for_pagebuilder_html_element>
             </wysiwyg>
         </cms>
+
+        <checkout>
+            <options>
+                <discount_codes_enabled>0</discount_codes_enabled>
+            </options>
+        </checkout>
     </default>
 </config>

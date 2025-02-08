@@ -19,6 +19,7 @@ composer require acid-unit/module-admin
 
 * [Configuration-Based Tweaks](#configuration-based-tweaks)
     + [WYSIWYG for PageBuilder `HTML Code` Element](#wysiwyg-editor-for-pagebuilder--html-code--element)
+    + [Toggle Discount Field](#toggle-discount-field)
 * [Code-Based Tweaks](#code-based-tweaks)
     + [WYSIWYG for Textarea Fields](#wysiwyg-editor-for-textarea-fields)
     + [Table Field](#table-field)
@@ -44,6 +45,28 @@ lets **admin users toggle the WYSIWYG editor** inside the element for **quicker 
 #### Demo
 
 ![Pagebuilder Editor Demo](https://github.com/acid-unit/docs/blob/main/admin/wysiwyg-editor/pagebuilder-editor-demo.gif?raw=true)
+
+### Toggle Discount Field
+
+#### Description
+
+Enables or disables the **discount code field** on both the **cart page** and **checkout payment step**.
+
+#### Toggle Config
+
+`Stores > Settings > Configuration > Sales > Checkout > Checkout Options`
+
+![Toggle Discount Code Field](https://github.com/acid-unit/docs/blob/main/admin/discount-codes/toggle.png?raw=true)
+
+#### Demo
+
+Cart Page:
+
+![Discount Field on Cart Page](https://github.com/acid-unit/docs/blob/main/admin/discount-codes/cart-page.png?raw=true)
+
+Checkout Payment Step:
+
+![Discount Field on Checkout](https://github.com/acid-unit/docs/blob/main/admin/discount-codes/checkout-billing-step.png?raw=true)
 
 ## Code-Based Tweaks
 
@@ -88,7 +111,8 @@ so that it appears **directly beneath it**.
 #### Description
 
 The Table Field is useful for storing structured data in the admin panel, like custom redirects,
-event tracking mappings, or configurable lists.   
+event tracking mappings, or configurable lists.
+
 Below is how to define it in `system.xml`.
 
 #### Implementation
