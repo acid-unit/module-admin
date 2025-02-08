@@ -17,7 +17,7 @@
 
         <checkout>
             <options>
-                <discount_codes_enabled>0</discount_codes_enabled>
+                <discount_field_enabled>0</discount_field_enabled>
             </options>
         </checkout>
     </default>

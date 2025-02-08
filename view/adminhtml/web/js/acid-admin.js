@@ -37,7 +37,7 @@ require([
                 text: 'Toggle WYSIWYG Editor'
             },
             discountCodes: {
-                href: 'row_checkout_options_discount_codes_enabled',
+                href: 'row_checkout_options_discount_field_enabled',
                 path: 'admin/system_config/edit/section/checkout',
                 text: 'Toggle Discount Codes'
             }
