@@ -16,7 +16,7 @@
                  showInDefault="1"
                  showInWebsite="1"
                  showInStore="1">
-            <label>Admin Tweaks</label>
+            <label>🛠 Admin Tweaks</label>
             <tab>acid_unit</tab>
             <resource>AcidUnit_Admin::acid</resource>
 

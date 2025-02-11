@@ -4,10 +4,8 @@
  */
 
 require([
-    'jquery',
     'domReady!'
 ], function (
-    $
 ) {
     'use strict';
 
@@ -19,7 +17,7 @@ require([
         li.appendChild(link);
         li.classList.add('level-1');
         li.classList.add('acid-website-url');
-        link.innerText = 'https://acid.7prism.com';
+        link.innerText = '🧪';
         link.href = 'https://acid.7prism.com';
         link.target = '_blank';
 

@@ -6,7 +6,6 @@
 /**
  * Variables
  */
-
 :root {
     --color-acid: #11CC11;
     --external-link-line-height: 19px;
@@ -18,17 +17,18 @@
 
     --menu-line-before__height: 1px;
     --menu-line-before__background-color: var(--color-brownie-vanilla);
+    --submenu__padding-horizontal: 1.5rem;
+    --submenu-link__padding-vertical: 1.25rem;
 }
 
 /**
  * Common
  */
-
 .admin__menu {
     li.item-acid-menu {
         display: none;
 
-        /** Flask Icon */
+        /** Root Menu Item Flask Icon */
 
         > a:before {
             content: '';
@@ -44,7 +44,7 @@
             filter: invert(62%) sepia(1%) saturate(1319%) hue-rotate(357deg) brightness(108%) contrast(90%);
         }
 
-        /** Separator */
+        /** Root Menu Item Separator */
 
         > a:after {
             background-color: var(--menu-line-before__background-color);
@@ -63,6 +63,25 @@
                 /* Set SVG color to #f7f3eb */
                 filter: invert(98%) sepia(84%) saturate(360%) hue-rotate(297deg) brightness(105%) contrast(94%);
             }
+        }
+    }
+}
+
+.admin__menu .level-0.item-acid-menu > .submenu > ul[role='menu'] {
+    padding-bottom: calc(var(--submenu-link__padding-vertical) * 2 + var(--submenu__padding-horizontal) * 2 + var(--external-link-line-height));
+}
+
+.acid-website-url {
+    position: absolute;
+    text-align: right;
+    bottom: var(--submenu__padding-horizontal);
+
+    a[href][target] {
+        color: var(--color-acid);
+        display: inline-flex !important;
+
+        &:after {
+            display: none;
         }
     }
 }
