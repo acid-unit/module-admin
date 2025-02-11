@@ -10,14 +10,14 @@
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
         <!-- admin tweaks item -->
-        <add id="AcidUnit_Admin::acid_menu_item_admin_tweaks"
+        <add id="AcidUnit_Admin::acid_admin_tweaks"
              title="Admin Tweaks"
              translate="title"
              module="AcidUnit_Admin"
              sortOrder="20"
-             parent="AcidUnit_Core::acid_menu_group_empty"
+             parent="AcidUnit_Core::acid_general"
              action="admin/system_config/edit/section/acid_admin_tweaks"
-             resource="AcidUnit_Admin::acid_menu_item_admin_tweaks"
+             resource="AcidUnit_Admin::acid_admin_tweaks"
         />
     </menu>
 </config>
