@@ -9,37 +9,58 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <section id="cms">
-            <group id="wysiwyg">
-                <field id="enabled_for_pagebuilder_html_element"
+        <section id="acid_admin_tweaks"
+                 translate="label"
+                 type="text"
+                 sortOrder="20"
+                 showInDefault="1"
+                 showInWebsite="1"
+                 showInStore="1">
+            <label>Admin Tweaks</label>
+            <tab>acid_unit</tab>
+            <resource>AcidUnit_Admin::acid</resource>
+
+            <group id="pagebuilder"
+                   translate="label"
+                   type="text"
+                   sortOrder="10"
+                   showInDefault="1"
+                   showInWebsite="1"
+                   showInStore="1">
+                <label>PageBuilder</label>
+
+                <field id="html_element_wysiwyg_enabled"
                        translate="label"
                        type="select"
-                       sortOrder="3"
+                       sortOrder="10"
                        showInDefault="1"
                        showInWebsite="1"
                        showInStore="1"
                        canRestore="1">
-                    <label>Display 'Show / Hide Editor' button for PageBuilder 'HTML Code' Element [🧪]</label>
-                    <comment><![CDATA[WYSIWYG Editor also can be added to the text or textarea type admin field. More info <a target="_blank" href="https://acid.7prism.com/module/admin/">here</a>.]]></comment>
+                    <label>Add WYSIWYG Editor support for 'HTML Code' Element</label>
+                    <comment><![CDATA[Make sure WYSIWYG Editor is enabled under <b>General > Content Management > WYSIWYG Options</b> section.]]></comment>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    <depends>
-                        <field id="enabled" negative="1">disabled</field>
-                    </depends>
                 </field>
             </group>
-        </section>
 
-        <section id="checkout">
-            <group id="options">
-                <field id="discount_field_enabled"
+            <group id="checkout"
+                   translate="label"
+                   type="text"
+                   sortOrder="20"
+                   showInDefault="1"
+                   showInWebsite="1"
+                   showInStore="1">
+                <label>Checkout</label>
+
+                <field id="discount_field_hidden"
                        translate="label"
                        type="select"
-                       sortOrder="40"
+                       sortOrder="10"
                        showInDefault="1"
                        showInWebsite="1"
                        showInStore="1"
                        canRestore="1">
-                    <label>Enable Discount Codes [🧪]</label>
+                    <label>Hide Discount Code Field</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
             </group>

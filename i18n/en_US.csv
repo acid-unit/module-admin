@@ -5,10 +5,8 @@ No,No
 "Insert Widget...","Insert Widget..."
 "Insert Image...","Insert Image..."
 "Insert Variable...","Insert Variable..."
-"🧪 Acid Unit","🧪 Acid Unit"
-Modules,Modules
 "Admin Tweaks","Admin Tweaks"
-"Toggle PageBuilder Wysiwyg Editor","Toggle PageBuilder Wysiwyg Editor"
-"Toggle Discount Codes Field","Toggle Discount Codes Field"
-"Display 'Show / Hide Editor' button for PageBuilder 'HTML Code' Element [🧪]","Display 'Show / Hide Editor' button for PageBuilder 'HTML Code' Element [🧪]"
-"Enable Discount Codes [🧪]","Enable Discount Codes [🧪]"
+PageBuilder,PageBuilder
+"Add WYSIWYG Editor support for 'HTML Code' Element","Add WYSIWYG Editor support for 'HTML Code' Element"
+Checkout,Checkout
+"Hide Discount Code Field","Hide Discount Code Field"

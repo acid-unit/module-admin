@@ -1,0 +1,68 @@
+/*
+ * Copyright © Acid Unit (https://acid.7prism.com). All rights reserved.
+ * See LICENSE file for license details.
+ */
+
+/**
+ * Variables
+ */
+
+:root {
+    --color-acid: #11CC11;
+    --external-link-line-height: 19px;
+    --root-menu-icon-size: 22px;
+    --flask-icon: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0ndXRmLTgnPz4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgJy0vL1czQy8vRFREIFNWRyAxLjEvL0VOJyAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz4KPCEtLSBVcGxvYWRlZCB0bzogU1ZHIFJlcG8sIHd3dy5zdmdyZXBvLmNvbSwgR2VuZXJhdG9yOiBTVkcgUmVwbyBNaXhlciBUb29scyAtLT4KPHN2ZyBmaWxsPSIjMDAwMDAwIiBoZWlnaHQ9IjgwMHB4IiB3aWR0aD0iODAwcHgiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDUxMiA1MTIiPgogIDxnPgogICAgPGc+CiAgICAgIDxnPgogICAgICAgIDxwYXRoIGQ9Im00MTAuMyw0NjAuMmgtMzA4LjZjLTAuNSwwLTAuOSwwLTEuMywwbDExMy43LTE4NC41YzItMy4yIDMtNi45IDMtMTAuN3YtMjEzLjJoNzcuNnYyMTMuMmMwLDMuOCAxLDcuNSAzLDEwLjdsMTEzLjcsMTg0LjVjLTAuMywwLTAuNywwLTEuMSwwem00MC43LTE0LjJsLTExNS4yLTE4Ni44di0xODYuNmMxMC4zLTYuMSAxNi45LTE2LjIgMTYuOS0yNy43IDAtMTktMTcuNy0zMy45LTQwLjItMzMuOWgtMTEzYy0yMi41LDAtNDAuMiwxNC45LTQwLjIsMzMuOSAwLDExLjUgNi41LDIxLjYgMTYuOSwyNy43djE4Ni43bC0xMTUuMiwxODYuN2MtNi40LDEwLjQtNi43LDIyLjktMC44LDMzLjUgNy41LDEzLjMgMjMuNCwyMS41IDQxLjUsMjEuNWgzMDguNWMxOC4xLDAgMzQtOC4yIDQxLjUtMjEuNSA2LTEwLjYgNS43LTIzLjEtMC43LTMzLjV6Ii8+CiAgICAgIDwvZz4KICAgIDwvZz4KICA8L2c+Cjwvc3ZnPg==');
+
+    /* magento variables */
+    --color-brownie-vanilla: #736963;
+
+    --menu-line-before__height: 1px;
+    --menu-line-before__background-color: var(--color-brownie-vanilla);
+}
+
+/**
+ * Common
+ */
+
+.admin__menu {
+    li.item-acid-menu {
+        display: none;
+
+        /** Flask Icon */
+
+        > a:before {
+            content: '';
+            background-image: var(--flask-icon);
+            background-repeat: no-repeat;
+            height: var(--root-menu-icon-size);
+            width: var(--root-menu-icon-size);
+            background-size: var(--root-menu-icon-size);
+            margin-left: auto;
+            margin-right: auto;
+
+            /** set SVG color to #aaa6a0 */
+            filter: invert(62%) sepia(1%) saturate(1319%) hue-rotate(357deg) brightness(108%) contrast(90%);
+        }
+
+        /** Separator */
+
+        > a:after {
+            background-color: var(--menu-line-before__background-color);
+            content: '';
+            display: block;
+            height: var(--menu-line-before__height);
+            left: 0;
+            margin-left: calc((100% - 68%) / 2);
+            position: absolute;
+            top: 0;
+            width: 68%;
+        }
+
+        &:hover {
+            > a:before {
+                /* Set SVG color to #f7f3eb */
+                filter: invert(98%) sepia(84%) saturate(360%) hue-rotate(297deg) brightness(105%) contrast(94%);
+            }
+        }
+    }
+}

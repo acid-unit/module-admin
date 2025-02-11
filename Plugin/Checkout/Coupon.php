@@ -38,7 +38,7 @@ class Coupon
      */
     public function afterProcess(LayoutProcessor $processor, array $jsLayout): array
     {
-        if (!$this->config->isDiscountFieldEnabled()) {
+        if ($this->config->isDiscountFieldHidden()) {
             $jsLayout['components']['checkout']['children']['steps']['children']['billing-step']['children']
             ['payment']['children']['afterMethods']['children']['discount']['config']['componentDisabled'] = true;
         }

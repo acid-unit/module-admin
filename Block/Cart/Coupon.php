@@ -45,7 +45,7 @@ class Coupon extends CouponParent
      */
     protected function _toHtml(): string
     {
-        if ($this->config->isDiscountFieldEnabled()) {
+        if (!$this->config->isDiscountFieldHidden()) {
             return parent::_toHtml();
         }
 

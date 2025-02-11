@@ -9,55 +9,15 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <!-- root menu item -->
-        <add id="AcidUnit_Admin::acid_menu"
-             title="🧪 Acid Unit"
-             translate="title"
-             module="AcidUnit_Admin"
-             sortOrder="90"
-             resource="AcidUnit_Admin::acid_menu"
-        />
-
-        <!-- modules group -->
-        <add id="AcidUnit_Admin::acid_menu_group_modules"
-             title="Modules"
-             translate="title"
-             module="AcidUnit_Admin"
-             sortOrder="10"
-             parent="AcidUnit_Admin::acid_menu"
-             resource="AcidUnit_Admin::acid_menu_group_modules"
-        />
-
-        <!-- admin tweaks group -->
-        <add id="AcidUnit_Admin::acid_menu_group_admin_tweaks"
+        <!-- admin tweaks item -->
+        <add id="AcidUnit_Admin::acid_menu_item_admin_tweaks"
              title="Admin Tweaks"
              translate="title"
              module="AcidUnit_Admin"
              sortOrder="20"
-             parent="AcidUnit_Admin::acid_menu"
-             resource="AcidUnit_Admin::acid_menu_group_admin_tweaks"
-        />
-
-        <!-- wysiwyg editor item -->
-        <add id="AcidUnit_Admin::acid_menu_item_wysiwyg_editor"
-             title="Toggle PageBuilder Wysiwyg Editor"
-             translate="title"
-             module="AcidUnit_Admin"
-             sortOrder="10"
-             parent="AcidUnit_Admin::acid_menu_group_admin_tweaks"
-             action="admin/system_config/edit/section/cms"
-             resource="AcidUnit_Admin::acid_menu_item_wysiwyg_editor"
-        />
-
-        <!-- discount codes item -->
-        <add id="AcidUnit_Admin::acid_menu_item_discount_codes"
-             title="Toggle Discount Codes Field"
-             translate="title"
-             module="AcidUnit_Admin"
-             sortOrder="20"
-             parent="AcidUnit_Admin::acid_menu_group_admin_tweaks"
-             action="admin/system_config/edit/section/checkout"
-             resource="AcidUnit_Admin::acid_menu_item_discount_codes"
+             parent="AcidUnit_Core::acid_menu_group_empty"
+             action="admin/system_config/edit/section/acid_admin_tweaks"
+             resource="AcidUnit_Admin::acid_menu_item_admin_tweaks"
         />
     </menu>
 </config>

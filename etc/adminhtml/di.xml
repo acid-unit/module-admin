@@ -8,12 +8,13 @@
 
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- Interface overriding 👇 -->
     <type name="AcidUnit\Admin\ViewModel\ConfigProvider">
         <arguments>
-            <!-- dependency on implementation -->
             <argument name="configProvider" xsi:type="object">AcidUnit\Admin\Model\AdminConfigProvider</argument>
         </arguments>
     </type>
+    <!-- Interface overriding 👆 -->
 
     <type name="AcidUnit\Admin\Model\AdminConfigProvider">
         <arguments>

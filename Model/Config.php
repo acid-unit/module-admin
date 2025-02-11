@@ -15,11 +15,14 @@ use Magento\Store\Model\ScopeInterface;
 
 class Config
 {
-    public const XML_PATH_WYSIWYG_FOR_PAGEBUILDER_HTML_ELEMENT_ENABLED
-        = 'cms/wysiwyg/enabled_for_pagebuilder_html_element';
+    public const XML_PATH_ROOT_MENU_ITEM_HIDDEN
+        = 'acid_config/general/root_menu_item_hidden';
 
-    public const XML_PATH_DISCOUNT_FIELD_ENABLED
-        = 'checkout/options/discount_field_enabled';
+    public const XML_PATH_WYSIWYG_FOR_PAGEBUILDER_HTML_ELEMENT_ENABLED
+        = 'acid_admin_tweaks/pagebuilder/html_element_wysiwyg_enabled';
+
+    public const XML_PATH_DISCOUNT_FIELD_HIDDEN
+        = 'acid_admin_tweaks/checkout/discount_field_hidden';
 
     /**
      * @param ScopeConfigInterface $scopeConfig
@@ -30,14 +33,27 @@ class Config
     }
 
     /**
-     * Is Discount Code field enabled
+     * Is [Acid Unit] root menu item hidden
      *
      * @return bool
      */
-    public function isDiscountFieldEnabled(): bool
+    public function isRootMenuItemHidden(): bool
     {
         return $this->scopeConfig->isSetFlag(
-            self::XML_PATH_DISCOUNT_FIELD_ENABLED,
+            self::XML_PATH_ROOT_MENU_ITEM_HIDDEN,
+            ScopeInterface::SCOPE_STORE
+        );
+    }
+
+    /**
+     * Is Discount Code field hidden
+     *
+     * @return bool
+     */
+    public function isDiscountFieldHidden(): bool
+    {
+        return $this->scopeConfig->isSetFlag(
+            self::XML_PATH_DISCOUNT_FIELD_HIDDEN,
             ScopeInterface::SCOPE_STORE
         );
     }

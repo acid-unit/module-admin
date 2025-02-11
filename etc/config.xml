@@ -9,16 +9,13 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
-        <cms>
-            <wysiwyg>
-                <enabled_for_pagebuilder_html_element>1</enabled_for_pagebuilder_html_element>
-            </wysiwyg>
-        </cms>
-
-        <checkout>
-            <options>
-                <discount_field_enabled>0</discount_field_enabled>
-            </options>
-        </checkout>
+        <acid_admin_tweaks>
+            <pagebuilder>
+                <html_element_wysiwyg_enabled>0</html_element_wysiwyg_enabled>
+            </pagebuilder>
+            <checkout>
+                <discount_field_hidden>0</discount_field_hidden>
+            </checkout>
+        </acid_admin_tweaks>
     </default>
 </config>

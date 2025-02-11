@@ -35,13 +35,14 @@ class TweaksConfigProvider implements ConfigProviderInterface
     public function getConfig(): array
     {
         return [
+            'root_menu_item_hidden' => $this->config->isRootMenuItemHidden(),
             'wysiwyg_editor' => [
                 'enabled' => $this->magentoWysiwygConfig->isEnabled(),
                 'enabled_for_pagebuilder_html_element' => $this->config->isWysiwygForPageBuilderHtmlElementEnabled()
             ],
             'checkout' => [
                 'discount' => [
-                    'enabled' => $this->config->isDiscountFieldEnabled()
+                    'hidden' => $this->config->isDiscountFieldHidden()
                 ]
             ]
         ];
