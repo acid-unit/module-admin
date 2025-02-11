@@ -13,9 +13,6 @@
             <pagebuilder>
                 <html_element_wysiwyg_enabled>0</html_element_wysiwyg_enabled>
             </pagebuilder>
-            <checkout>
-                <discount_field_hidden>0</discount_field_hidden>
-            </checkout>
         </acid_admin_tweaks>
     </default>
 </config>
