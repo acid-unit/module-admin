@@ -19,12 +19,13 @@ composer require acid-unit/module-admin
 
 * [Configuration-Based Tweaks](#configuration-based-tweaks)
     + [WYSIWYG for PageBuilder `HTML Code` Element](#wysiwyg-editor-for-pagebuilder--html-code--element)
-    + [Toggle Discount Field](#toggle-discount-field)
 * [Code-Based Tweaks](#code-based-tweaks)
     + [WYSIWYG for Textarea Fields](#wysiwyg-editor-for-textarea-fields)
     + [Table Field](#table-field)
 
 ## Configuration-Based Tweaks
+
+![Configuration-Based Tweaks Overview](https://github.com/acid-unit/docs/blob/main/admin/overview.png?raw=true)
 
 ### WYSIWYG Editor for PageBuilder `HTML Code` Element
 
@@ -36,37 +37,9 @@ reducing errors and **improving content management efficiency**.
 Since the `HTML Code` element is powerful yet complex, this configuration 
 lets **admin users toggle the WYSIWYG editor** inside the element for **quicker editing**.
 
-#### Toggle Config
-
-`Stores > Settings > Configuration > General > Content Management > WYSIWYG Options`
-
-![Toggle Pagebuilder Editor](https://github.com/acid-unit/docs/blob/main/admin/wysiwyg-editor/toggle.png?raw=true)
-
 #### Demo
 
 ![Pagebuilder Editor Demo](https://github.com/acid-unit/docs/blob/main/admin/wysiwyg-editor/pagebuilder-editor-demo.gif?raw=true)
-
-### Toggle Discount Field
-
-#### Description
-
-Enables or disables the **discount code field** on both the **cart page** and **checkout payment step**.
-
-#### Toggle Config
-
-`Stores > Settings > Configuration > Sales > Checkout > Checkout Options`
-
-![Toggle Discount Code Field](https://github.com/acid-unit/docs/blob/main/admin/discount-codes/toggle.png?raw=true)
-
-#### Demo
-
-Cart Page:
-
-![Discount Field on Cart Page](https://github.com/acid-unit/docs/blob/main/admin/discount-codes/cart-page.png?raw=true)
-
-Checkout Payment Step:
-
-![Discount Field on Checkout](https://github.com/acid-unit/docs/blob/main/admin/discount-codes/checkout-billing-step.png?raw=true)
 
 ## Code-Based Tweaks
 
