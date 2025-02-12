@@ -11,10 +11,12 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
-                <resource id="AcidUnit_Core::acid_menu">
-                    <resource id="AcidUnit_Core::acid_general">
+                <resource id="AcidUnit_Admin::acid_menu" title="Acid Unit" sortOrder="10">
+                    <resource id="AcidUnit_Admin::acid_general" title="General" sortOrder="10">
+                        <resource id="AcidUnit_Admin::acid_config" title="Configuration" sortOrder="10"/>
                         <resource id="AcidUnit_Admin::acid_admin_tweaks" title="Admin Tweaks" sortOrder="20"/>
                     </resource>
+                    <resource id="AcidUnit_Admin::acid_modules" title="Modules" sortOrder="20"/>
                 </resource>
             </resource>
         </resources>

@@ -25,7 +25,7 @@ require([
     }
 
     function toggleRootItemVisibility() {
-        const item = document.querySelector('#menu-acidunit-core-acid-menu'),
+        const item = document.querySelector('.item-acid-menu'),
             isHidden = window.acidAdminConfig ? window.acidAdminConfig['root_menu_item_hidden'] : false;
 
         if (!isHidden) {

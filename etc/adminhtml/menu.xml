@@ -9,15 +9,55 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
+        <!-- root menu item -->
+        <add id="AcidUnit_Admin::acid_menu"
+             title="Acid Unit"
+             translate="title"
+             module="AcidUnit_Admin"
+             sortOrder="90"
+             resource="AcidUnit_Admin::acid_menu"
+        />
+
+        <!-- general group -->
+        <add id="AcidUnit_Admin::acid_general"
+             title="General"
+             translate="title"
+             module="AcidUnit_Admin"
+             sortOrder="10"
+             parent="AcidUnit_Admin::acid_menu"
+             resource="AcidUnit_Admin::acid_general"
+        />
+
+        <!-- config item -->
+        <add id="AcidUnit_Admin::acid_config"
+             title="Configuration"
+             translate="title"
+             module="AcidUnit_Admin"
+             sortOrder="10"
+             parent="AcidUnit_Admin::acid_general"
+             action="admin/system_config/edit/section/acid_config"
+             resource="AcidUnit_Admin::acid_config"
+        />
+
         <!-- admin tweaks item -->
         <add id="AcidUnit_Admin::acid_admin_tweaks"
              title="Admin Tweaks"
              translate="title"
              module="AcidUnit_Admin"
              sortOrder="20"
-             parent="AcidUnit_Core::acid_general"
+             parent="AcidUnit_Admin::acid_general"
              action="admin/system_config/edit/section/acid_admin_tweaks"
              resource="AcidUnit_Admin::acid_admin_tweaks"
+        />
+
+        <!-- modules group -->
+        <add id="AcidUnit_Admin::acid_modules"
+             title="Modules"
+             translate="title"
+             module="AcidUnit_Admin"
+             sortOrder="20"
+             parent="AcidUnit_Admin::acid_menu"
+             resource="AcidUnit_Admin::acid_modules"
         />
     </menu>
 </config>

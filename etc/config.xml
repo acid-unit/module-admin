@@ -9,6 +9,12 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
+        <acid_config>
+            <general>
+                <root_menu_item_hidden>0</root_menu_item_hidden>
+            </general>
+        </acid_config>
+
         <acid_admin_tweaks>
             <pagebuilder>
                 <html_element_wysiwyg_enabled>0</html_element_wysiwyg_enabled>

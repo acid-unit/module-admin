@@ -7,10 +7,8 @@
         "acid-unit/module-core": "^0.2",
         "magento/framework": ">=103.0.4",
         "magento/module-backend": "*",
-        "magento/module-checkout": "*",
         "magento/module-cms": "*",
         "magento/module-config": "*",
-        "magento/module-customer": "*",
         "magento/module-page-builder": "*",
         "magento/module-store": "*",
         "php": ">=8.1"
