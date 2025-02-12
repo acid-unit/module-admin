@@ -4,7 +4,7 @@
     "description": "Admin module for [\uD83E\uDDEAAcid Unit] extensions + useful tweaks and configuration",
     "type": "magento2-module",
     "require": {
-        "acid-unit/module-core": "^0.2",
+        "acid-unit/module-core": "^0.3",
         "magento/framework": ">=103.0.4",
         "magento/module-backend": "*",
         "magento/module-cms": "*",
