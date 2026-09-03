@@ -29,13 +29,13 @@ class AdminTableField
     private array $tableFields;
 
     /**
-     * @param Json|null $serializer
      * @param Random $mathRandom
+     * @param Json|null $serializer
      * @param array $tableFields
      */
     public function __construct(
-        ?Json                   $serializer = null,
         private readonly Random $mathRandom,
+        ?Json                   $serializer = null,
         array                   $tableFields = []
     ) {
         /** @noinspection ObjectManagerInspection */
