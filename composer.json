@@ -1,6 +1,6 @@
 {
     "name": "acid-unit/module-admin",
-    "version": "0.4.1",
+    "version": "0.4.2",
     "description": "Admin module for [\uD83E\uDDEAAcid Unit] extensions + useful tweaks and configuration",
     "type": "magento2-module",
     "require": {
