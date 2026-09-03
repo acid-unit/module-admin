@@ -34,7 +34,7 @@ class AdminTableField
      * @param array $tableFields
      */
     public function __construct(
-        Json                    $serializer = null,
+        ?Json                   $serializer = null,
         private readonly Random $mathRandom,
         array                   $tableFields = []
     ) {
